@@ -1,4 +1,4 @@
-# react-native-expo-template
+# react-native-multi-platform
 
 react-native 0.71版本内置了typescript,这个例子使用的社区的typescript模板：[react-native-template-typescript](https://github.com/react-native-community/react-native-template-typescript)
 ## Getting started
@@ -9,10 +9,6 @@ react-native 0.71版本内置了typescript,这个例子使用的社区的typescr
 
     我使用的是android studio 和 Xcode 安装的依赖，xcode环境配置还是比较麻烦的，可以找些教程看下，比如:[expo](https://docs.expo.dev/get-started/installation/)
 
-
-```
-git clone https://github.com/jlongguo/expo-rn-example.git
-```
 
 ### develop
 ```
