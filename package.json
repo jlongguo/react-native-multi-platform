@@ -1,0 +1,47 @@
+{
+  "name": "react-native-expo-template",
+  "version": "0.1.0",
+  "scripts": {
+    "start": "expo start --dev-client",
+    "android": "PLATFORM=android expo run:android",
+    "ios": "PLATFORM=ios expo run:ios",
+    "web": "PLATFORM=web expo start --web",
+    "build": "npm run build:web && npm run build:android",
+    "build:web": "PLATFORM=web npx expo export:web",
+    "build:common": "PLATFORM=$PLATFORM react-native bundle --platform android --dev false --entry-file ./config/common.js --bundle-output ./bundle/common.bundle --config ./common.config.js",
+    "build:android-entry": "PLATFORM=$PLATFORM react-native bundle --platform android --dev false --entry-file ./config/index.android.js --bundle-output ./bundle/index.android.bundle --config ./android.config.js",
+    "build:android": "PLATFORM=android npm run build:common & PLATFORM=android npm run build:android-entry"
+  },
+  "dependencies": {
+    "@expo/vector-icons": "^13.0.0",
+    "@expo/webpack-config": "^0.17.2",
+    "expo": "~47.0.12",
+    "expo-image-picker": "~14.0.2",
+    "expo-splash-screen": "~0.17.5",
+    "expo-status-bar": "~1.4.2",
+    "react": "18.1.0",
+    "react-dom": "18.1.0",
+    "react-native": "0.70.5",
+    "react-native-web": "~0.18.9"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.9",
+    "@types/node": "^18.11.18",
+    "@types/react": "~18.0.14",
+    "@types/react-native": "~0.70.6",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.4"
+  },
+  "keywords": [
+    "react-native",
+    "react-native-web",
+    "typescript",
+    "jest",
+    "template",
+    "expo",
+    "expo custom build",
+    "react-native-multibundler"
+  ],
+  "author": "jlongguo <guojianlong2018@gmail.com>",
+  "private": true
+}
